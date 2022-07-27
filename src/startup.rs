@@ -5,7 +5,6 @@ use std::net::TcpListener;
 use crate::health_check::health_check;
 use crate::subscriptions::subscribe;
 
-
 pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
     let server = HttpServer::new(|| {
         App::new()
